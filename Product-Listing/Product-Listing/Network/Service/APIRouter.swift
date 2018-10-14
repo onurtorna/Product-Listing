@@ -59,10 +59,10 @@ enum APIRouter {
     }
 
     var parameters: Parameters? {
+
         switch self {
-        // TODO: To be implemented
         case .productList(pageNumber: let pageNumber):
-            return nil
+            return CreateAnalysisRequest.generateParameters(pageNumber: pageNumber)
         }
     }
 
