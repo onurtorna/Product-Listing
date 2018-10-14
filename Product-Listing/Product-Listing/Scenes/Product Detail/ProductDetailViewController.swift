@@ -15,7 +15,31 @@ final class ProductDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // TODO:
+        viewModel.stateChangeHandler = applyState(_:)
+        viewModel.fetchProductDetail()
+    }
+}
+
+private extension ProductDetailViewController {
+
+    func applyState(_ change: ProductDetailState.Change) {
+
+        func applyState(_ change: ProductListState.Change) {
+
+            switch change {
+            case .loading(let isLoading):
+                // TODO: Show/hide loading view
+                break
+
+            case .error(let receivedError):
+                // TODO: Show/hide error view
+                break
+
+            case .dataFetch:
+                // TODO: To be implemented
+                break
+            }
+        }
     }
 }
 
