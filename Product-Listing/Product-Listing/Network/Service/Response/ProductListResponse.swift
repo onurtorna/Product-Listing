@@ -9,5 +9,7 @@
 import Foundation
 
 final class ProductListResponse: Response {
-    // TODO: To be implemented
+
+    /// Product hits
+    var hits: [Hit]?
 }

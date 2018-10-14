@@ -25,6 +25,7 @@
 		10BA8D9B2173A3A00028E762 /* StoryboardLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9A2173A3A00028E762 /* StoryboardLoadable.swift */; };
 		10BA8D9E2173A57E0028E762 /* ProductListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9D2173A57E0028E762 /* ProductListRequest.swift */; };
 		10BA8DA02173BE830028E762 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9F2173BE830028E762 /* Global.swift */; };
+		10EE96832173C44000C4F32C /* Hit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96822173C44000C4F32C /* Hit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		10BA8D9A2173A3A00028E762 /* StoryboardLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardLoadable.swift; sourceTree = "<group>"; };
 		10BA8D9D2173A57E0028E762 /* ProductListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRequest.swift; sourceTree = "<group>"; };
 		10BA8D9F2173BE830028E762 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		10EE96822173C44000C4F32C /* Hit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		102026A42173622200E2CB17 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				10EE96822173C44000C4F32C /* Hit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				10BA8D89217379D50028E762 /* APIRouter.swift in Sources */,
 				10BA8DA02173BE830028E762 /* Global.swift in Sources */,
 				10BA8D9E2173A57E0028E762 /* ProductListRequest.swift in Sources */,
+				10EE96832173C44000C4F32C /* Hit.swift in Sources */,
 				10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */,
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,
 				10BA8D8721736ED90028E762 /* Network.swift in Sources */,
