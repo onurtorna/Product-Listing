@@ -29,6 +29,8 @@
 		10EE96872173C8C500C4F32C /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96862173C8C500C4F32C /* ProductCollectionViewCell.swift */; };
 		10EE96892173C92100C4F32C /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10EE96882173C92100C4F32C /* ProductCollectionViewCell.xib */; };
 		10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE968A2173CEC000C4F32C /* NibLoadable.swift */; };
+		10EE96912173D29A00C4F32C /* ProductListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96902173D29A00C4F32C /* ProductListDataProtocol.swift */; };
+		10EE96932173D2B500C4F32C /* ProductListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96922173D2B500C4F32C /* ProductListDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +70,8 @@
 		10EE96862173C8C500C4F32C /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		10EE96882173C92100C4F32C /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
 		10EE968A2173CEC000C4F32C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		10EE96902173D29A00C4F32C /* ProductListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataProtocol.swift; sourceTree = "<group>"; };
+		10EE96922173D2B500C4F32C /* ProductListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +148,7 @@
 		102026A52173622D00E2CB17 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				102026862173619D00E2CB17 /* ProductListViewController.swift */,
+				10EE968C2173D1C800C4F32C /* List */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -247,6 +251,24 @@
 				10EE96882173C92100C4F32C /* ProductCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		10EE968C2173D1C800C4F32C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				10EE968F2173D28700C4F32C /* Network */,
+				102026862173619D00E2CB17 /* ProductListViewController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		10EE968F2173D28700C4F32C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				10EE96902173D29A00C4F32C /* ProductListDataProtocol.swift */,
+				10EE96922173D2B500C4F32C /* ProductListDataController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -405,8 +427,10 @@
 				10EE96832173C44000C4F32C /* Hit.swift in Sources */,
 				10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */,
 				10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */,
+				10EE96932173D2B500C4F32C /* ProductListDataController.swift in Sources */,
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,
 				10BA8D8721736ED90028E762 /* Network.swift in Sources */,
+				10EE96912173D29A00C4F32C /* ProductListDataProtocol.swift in Sources */,
 				10BA8D9521739CB70028E762 /* ErrorHandler.swift in Sources */,
 				10BA8D9121739BF30028E762 /* ServiceManager.swift in Sources */,
 				10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */,
