@@ -35,6 +35,7 @@
 		10EE96972173E26D00C4F32C /* UKPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EE96962173E26D00C4F32C /* UKPullToRefresh.framework */; };
 		10EE96992173E27300C4F32C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EE96982173E27300C4F32C /* Kingfisher.framework */; };
 		10EE969C2173E3B100C4F32C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */; };
+		10EE96A02173E67200C4F32C /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		10EE96962173E26D00C4F32C /* UKPullToRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UKPullToRefresh.framework; path = Carthage/Build/iOS/UKPullToRefresh.framework; sourceTree = SOURCE_ROOT; };
 		10EE96982173E27300C4F32C /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
 		10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				10EE968C2173D1C800C4F32C /* List */,
+				10EE969E2173E65C00C4F32C /* Product Detail */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -291,6 +294,14 @@
 				10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		10EE969E2173E65C00C4F32C /* Product Detail */ = {
+			isa = PBXGroup;
+			children = (
+				10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */,
+			);
+			path = "Product Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +455,7 @@
 			files = (
 				10BA8D9321739C210028E762 /* Response.swift in Sources */,
 				102026872173619D00E2CB17 /* ProductListViewController.swift in Sources */,
+				10EE96A02173E67200C4F32C /* ProductDetailViewController.swift in Sources */,
 				10BA8D9B2173A3A00028E762 /* StoryboardLoadable.swift in Sources */,
 				10BA8D9821739F860028E762 /* ProductListResponse.swift in Sources */,
 				10BA8D89217379D50028E762 /* APIRouter.swift in Sources */,
