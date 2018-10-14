@@ -34,6 +34,7 @@
 		10EE96952173D38400C4F32C /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96942173D38400C4F32C /* ProductListViewModel.swift */; };
 		10EE96972173E26D00C4F32C /* UKPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EE96962173E26D00C4F32C /* UKPullToRefresh.framework */; };
 		10EE96992173E27300C4F32C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EE96982173E27300C4F32C /* Kingfisher.framework */; };
+		10EE969C2173E3B100C4F32C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		10EE96942173D38400C4F32C /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		10EE96962173E26D00C4F32C /* UKPullToRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UKPullToRefresh.framework; path = Carthage/Build/iOS/UKPullToRefresh.framework; sourceTree = SOURCE_ROOT; };
 		10EE96982173E27300C4F32C /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
+		10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 			children = (
 				102026842173619D00E2CB17 /* AppDelegate.swift */,
 				10BA8D9F2173BE830028E762 /* Global.swift */,
+				10EE969A2173E39300C4F32C /* Extensions */,
 				102026A42173622200E2CB17 /* Models */,
 				102026A62173623100E2CB17 /* Network */,
 				10BA8D992173A3880028E762 /* Protocols */,
@@ -280,6 +283,14 @@
 				10EE96922173D2B500C4F32C /* ProductListDataController.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		10EE969A2173E39300C4F32C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -441,6 +452,7 @@
 				10EE96872173C8C500C4F32C /* ProductCollectionViewCell.swift in Sources */,
 				10EE96832173C44000C4F32C /* Hit.swift in Sources */,
 				10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */,
+				10EE969C2173E3B100C4F32C /* UIImageView+Extensions.swift in Sources */,
 				10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */,
 				10EE96932173D2B500C4F32C /* ProductListDataController.swift in Sources */,
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,

@@ -21,7 +21,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WeS-d4-eTD">
                         <rect key="frame" x="0.0" y="0.0" width="235" height="150"/>
-                        <color key="backgroundColor" red="0.17864041059999999" green="1" blue="0.14263885070000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="150" id="ELf-np-xpE"/>
                         </constraints>
@@ -65,6 +65,7 @@
             <size key="customSize" width="235" height="315"/>
             <connections>
                 <outlet property="designerName" destination="3o8-0T-ULO" id="v1e-Rx-N8V"/>
+                <outlet property="imageView" destination="WeS-d4-eTD" id="ark-pV-ONq"/>
                 <outlet property="nameLabel" destination="k30-GV-GWM" id="23W-YC-y7y"/>
                 <outlet property="priceLabel" destination="Dyf-4n-Y1i" id="Lng-AL-GhJ"/>
             </connections>
