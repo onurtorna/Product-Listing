@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UKPullToRefresh
 
 class ProductListViewController: UIViewController {
 
@@ -34,6 +35,11 @@ class ProductListViewController: UIViewController {
 
         viewModel.stateChangeHandler = applyState(_:)
         viewModel.fetchProducts()
+
+        collectionView.addPullToRefresh(to: .bottom) { [unowned self] () -> (Void) in
+            self.viewModel.fetchProducts()
+            self.collectionView.pullToRefreshView.state = .stopped
+        }
     }
 }
 

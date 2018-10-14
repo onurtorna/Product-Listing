@@ -77,6 +77,7 @@ extension ProductListViewModel {
                 return
             }
 
+            strongSelf.state.pageNumber += 1
             strongSelf.state.hits.append(contentsOf: hits)
         }
     }
