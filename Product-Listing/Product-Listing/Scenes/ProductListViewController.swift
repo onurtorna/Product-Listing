@@ -15,3 +15,11 @@ class ProductListViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 }
+
+// MARK: - StoryboardLoadable
+extension ProductListViewController: StoryboardLoadable {
+
+    static var defaultStoryboardName: String {
+        return "Product"
+    }
+}
