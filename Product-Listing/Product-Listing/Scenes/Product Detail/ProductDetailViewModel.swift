@@ -13,7 +13,7 @@ final class ProductDetailState {
     enum Change {
         case loading(Bool)
         case error(Error?)
-        case dataFetch
+        case dataFetch(Hit?)
     }
 
     /// On change block
@@ -38,7 +38,7 @@ final class ProductDetailState {
 
     var product: Hit? {
         didSet {
-            onChange?(.dataFetch)
+            onChange?(.dataFetch(product))
         }
     }
 
