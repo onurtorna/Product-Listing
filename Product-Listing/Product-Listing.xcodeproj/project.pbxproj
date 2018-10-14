@@ -14,6 +14,14 @@
 		1020268F2173619E00E2CB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1020268D2173619E00E2CB17 /* LaunchScreen.storyboard */; };
 		1020269A2173619E00E2CB17 /* ProductListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102026992173619E00E2CB17 /* ProductListingTests.swift */; };
 		10BA8D83217368D10028E762 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA8D82217368D10028E762 /* Alamofire.framework */; };
+		10BA8D8721736ED90028E762 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D8621736ED90028E762 /* Network.swift */; };
+		10BA8D89217379D50028E762 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D88217379D50028E762 /* APIRouter.swift */; };
+		10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D8B21737A3F0028E762 /* NetworkManager.swift */; };
+		10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D8E21737CA30028E762 /* APIClient.swift */; };
+		10BA8D9121739BF30028E762 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9021739BF30028E762 /* ServiceManager.swift */; };
+		10BA8D9321739C210028E762 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9221739C210028E762 /* Response.swift */; };
+		10BA8D9521739CB70028E762 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9421739CB70028E762 /* ErrorHandler.swift */; };
+		10BA8D9821739F860028E762 /* ProductListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9721739F860028E762 /* ProductListResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,14 @@
 		102026992173619E00E2CB17 /* ProductListingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingTests.swift; sourceTree = "<group>"; };
 		1020269B2173619E00E2CB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10BA8D82217368D10028E762 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		10BA8D8621736ED90028E762 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		10BA8D88217379D50028E762 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		10BA8D8B21737A3F0028E762 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		10BA8D8E21737CA30028E762 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		10BA8D9021739BF30028E762 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		10BA8D9221739C210028E762 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		10BA8D9421739CB70028E762 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		10BA8D9721739F860028E762 /* ProductListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +134,11 @@
 		102026A62173623100E2CB17 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				10BA8D9421739CB70028E762 /* ErrorHandler.swift */,
+				10BA8D8621736ED90028E762 /* Network.swift */,
+				10BA8D9221739C210028E762 /* Response.swift */,
+				10BA8D8A21737A340028E762 /* Managers */,
+				10BA8D8D21737C910028E762 /* Service */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -146,6 +167,33 @@
 				10BA8D82217368D10028E762 /* Alamofire.framework */,
 			);
 			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		10BA8D8A21737A340028E762 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				10BA8D8B21737A3F0028E762 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		10BA8D8D21737C910028E762 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				10BA8D9621739F730028E762 /* Response */,
+				10BA8D88217379D50028E762 /* APIRouter.swift */,
+				10BA8D8E21737CA30028E762 /* APIClient.swift */,
+				10BA8D9021739BF30028E762 /* ServiceManager.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		10BA8D9621739F730028E762 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				10BA8D9721739F860028E762 /* ProductListResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,8 +340,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10BA8D9321739C210028E762 /* Response.swift in Sources */,
 				102026872173619D00E2CB17 /* ViewController.swift in Sources */,
+				10BA8D9821739F860028E762 /* ProductListResponse.swift in Sources */,
+				10BA8D89217379D50028E762 /* APIRouter.swift in Sources */,
+				10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */,
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,
+				10BA8D8721736ED90028E762 /* Network.swift in Sources */,
+				10BA8D9521739CB70028E762 /* ErrorHandler.swift in Sources */,
+				10BA8D9121739BF30028E762 /* ServiceManager.swift in Sources */,
+				10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
