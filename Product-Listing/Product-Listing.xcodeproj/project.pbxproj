@@ -32,6 +32,8 @@
 		10EE96912173D29A00C4F32C /* ProductListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96902173D29A00C4F32C /* ProductListDataProtocol.swift */; };
 		10EE96932173D2B500C4F32C /* ProductListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96922173D2B500C4F32C /* ProductListDataController.swift */; };
 		10EE96952173D38400C4F32C /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96942173D38400C4F32C /* ProductListViewModel.swift */; };
+		10EE96972173E26D00C4F32C /* UKPullToRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EE96962173E26D00C4F32C /* UKPullToRefresh.framework */; };
+		10EE96992173E27300C4F32C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EE96982173E27300C4F32C /* Kingfisher.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		10EE96902173D29A00C4F32C /* ProductListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataProtocol.swift; sourceTree = "<group>"; };
 		10EE96922173D2B500C4F32C /* ProductListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataController.swift; sourceTree = "<group>"; };
 		10EE96942173D38400C4F32C /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		10EE96962173E26D00C4F32C /* UKPullToRefresh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UKPullToRefresh.framework; path = Carthage/Build/iOS/UKPullToRefresh.framework; sourceTree = SOURCE_ROOT; };
+		10EE96982173E27300C4F32C /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10EE96972173E26D00C4F32C /* UKPullToRefresh.framework in Frameworks */,
+				10EE96992173E27300C4F32C /* Kingfisher.framework in Frameworks */,
 				10BA8D83217368D10028E762 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				10BA8D82217368D10028E762 /* Alamofire.framework */,
+				10EE96982173E27300C4F32C /* Kingfisher.framework */,
+				10EE96962173E26D00C4F32C /* UKPullToRefresh.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -383,12 +391,16 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/UKPullToRefresh.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 			);
 			name = "Carthage Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(FRAMEWORKS_FOLDER_PATH)/UKPullToRefresh.framework",
+				"$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

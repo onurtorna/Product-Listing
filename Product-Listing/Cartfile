@@ -4,3 +4,5 @@
 # carthage update --platform iOS
 
 github "Alamofire/Alamofire" == 4.7.3
+github "onevcat/Kingfisher" == 4.10.0
+github "urklc/UKPullToRefresh" == 1.0.6
