@@ -20,6 +20,6 @@ class ProductListViewController: UIViewController {
 extension ProductListViewController: StoryboardLoadable {
 
     static var defaultStoryboardName: String {
-        return "Product"
+        return Global.Storyboard.product
     }
 }
