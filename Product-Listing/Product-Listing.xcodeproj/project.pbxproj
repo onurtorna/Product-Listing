@@ -12,7 +12,7 @@
 		1020268A2173619D00E2CB17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102026882173619D00E2CB17 /* Main.storyboard */; };
 		1020268C2173619E00E2CB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1020268B2173619E00E2CB17 /* Assets.xcassets */; };
 		1020268F2173619E00E2CB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1020268D2173619E00E2CB17 /* LaunchScreen.storyboard */; };
-		1020269A2173619E00E2CB17 /* Product_ListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102026992173619E00E2CB17 /* Product_ListingTests.swift */; };
+		1020269A2173619E00E2CB17 /* ProductListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102026992173619E00E2CB17 /* ProductListingTests.swift */; };
 		10BA8D83217368D10028E762 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA8D82217368D10028E762 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 		1020268E2173619E00E2CB17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		102026902173619E00E2CB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102026952173619E00E2CB17 /* Product-ListingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Product-ListingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		102026992173619E00E2CB17 /* Product_ListingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product_ListingTests.swift; sourceTree = "<group>"; };
+		102026992173619E00E2CB17 /* ProductListingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingTests.swift; sourceTree = "<group>"; };
 		1020269B2173619E00E2CB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10BA8D82217368D10028E762 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -94,7 +94,7 @@
 		102026982173619E00E2CB17 /* Product-ListingTests */ = {
 			isa = PBXGroup;
 			children = (
-				102026992173619E00E2CB17 /* Product_ListingTests.swift */,
+				102026992173619E00E2CB17 /* ProductListingTests.swift */,
 				1020269B2173619E00E2CB17 /* Info.plist */,
 			);
 			path = "Product-ListingTests";
@@ -159,6 +159,7 @@
 				1020267E2173619D00E2CB17 /* Frameworks */,
 				1020267F2173619D00E2CB17 /* Resources */,
 				10BA8D84217368F30028E762 /* Carthage Run Script */,
+				10BA8D8521736B440028E762 /* Swiftlint Run Script */,
 			);
 			buildRules = (
 			);
@@ -266,6 +267,24 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
+		10BA8D8521736B440028E762 /* Swiftlint Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Swiftlint Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -282,7 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1020269A2173619E00E2CB17 /* Product_ListingTests.swift in Sources */,
+				1020269A2173619E00E2CB17 /* ProductListingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +468,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.personal.listing.Product-Listing";
+				PRODUCT_MODULE_NAME = ProductListing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -472,6 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.personal.listing.Product-Listing";
+				PRODUCT_MODULE_NAME = ProductListing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

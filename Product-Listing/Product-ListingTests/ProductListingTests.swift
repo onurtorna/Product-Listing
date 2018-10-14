@@ -1,5 +1,5 @@
 //
-//  Product_ListingTests.swift
+//  ProductListingTests.swift
 //  Product-ListingTests
 //
 //  Created by Onur Torna on 14.10.2018.
@@ -7,9 +7,9 @@
 //
 
 import XCTest
-@testable import Product_Listing
+@testable import ProductListing
 
-class Product_ListingTests: XCTestCase {
+class ProductListingTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
