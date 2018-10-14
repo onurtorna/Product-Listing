@@ -14,7 +14,8 @@ final class ProductListRouter: ProductListRoutingProtocol {
                                                skuId: String) {
 
         let detailViewController = ProductDetailViewController.loadFromStoryboard()
-        // TODO: Set view model
+        detailViewController.viewModel = ProductDetailViewModel(slug: skuId,
+                                                                dataController: ProductDetailDataController())
         viewController.navigationController?.pushViewController(detailViewController,
                                                                 animated: true)
     }

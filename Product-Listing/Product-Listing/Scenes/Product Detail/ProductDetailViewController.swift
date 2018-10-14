@@ -9,7 +9,14 @@
 import UIKit
 
 final class ProductDetailViewController: UIViewController {
-    // TODO: To be implemented
+
+    var viewModel: ProductDetailViewModel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // TODO:
+    }
 }
 
 // MARK: - StoryboardLoadable

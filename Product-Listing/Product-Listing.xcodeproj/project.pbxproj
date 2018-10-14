@@ -41,6 +41,7 @@
 		10EE96A82173E9EB00C4F32C /* ProductDetailDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A72173E9EB00C4F32C /* ProductDetailDataProtocol.swift */; };
 		10EE96AA2173E9F900C4F32C /* ProductDetailDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A92173E9F900C4F32C /* ProductDetailDataController.swift */; };
 		10EE96AC2173EAAE00C4F32C /* ProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96AB2173EAAE00C4F32C /* ProductDetailRequest.swift */; };
+		10EE96B02173ED6F00C4F32C /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96AF2173ED6F00C4F32C /* ProductDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		10EE96A72173E9EB00C4F32C /* ProductDetailDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDataProtocol.swift; sourceTree = "<group>"; };
 		10EE96A92173E9F900C4F32C /* ProductDetailDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDataController.swift; sourceTree = "<group>"; };
 		10EE96AB2173EAAE00C4F32C /* ProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRequest.swift; sourceTree = "<group>"; };
+		10EE96AF2173ED6F00C4F32C /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 			children = (
 				10EE96A62173E9D700C4F32C /* Network */,
 				10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */,
+				10EE96AF2173ED6F00C4F32C /* ProductDetailViewModel.swift */,
 			);
 			path = "Product Detail";
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				10EE96952173D38400C4F32C /* ProductListViewModel.swift in Sources */,
 				10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */,
 				10EE96A52173E73000C4F32C /* ProductListRouter.swift in Sources */,
+				10EE96B02173ED6F00C4F32C /* ProductDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
