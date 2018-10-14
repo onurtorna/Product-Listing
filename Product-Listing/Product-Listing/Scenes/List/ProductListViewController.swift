@@ -50,6 +50,13 @@ private extension ProductListViewController {
     func applyState(_ change: ProductListState.Change) {
 
         switch change {
+        case .loading(let isLoading):
+            // TODO: Show/hide loading view
+            break
+
+        case .error(let receivedError):
+            // TODO: Show/hide error view
+            break
         case .dataFetch:
             collectionView.reloadData()
         }

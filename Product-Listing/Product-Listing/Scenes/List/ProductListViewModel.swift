@@ -12,11 +12,27 @@ import Foundation
 final class ProductListState {
 
     enum Change {
+        case loading(Bool)
+        case error(Error?)
         case dataFetch
     }
 
     /// On change block
     var onChange: ((ProductListState.Change) -> Void)?
+
+    /// Indicates the current loading state
+    var isLoading = false {
+        didSet {
+            onChange?(.loading(isLoading))
+        }
+    }
+
+    /// Received error
+    var receivedError: Error? {
+        didSet {
+            onChange?(.error(receivedError))
+        }
+    }
 
     var pageNumber = 0
 
@@ -67,13 +83,15 @@ extension ProductListViewModel {
 
     /// Fetches products with current page number
     func fetchProducts() {
+
+        state.isLoading = true
         dataController.fetcthProductList(pageNumber: state.pageNumber) { [weak self] (hits, error) in
 
             guard let strongSelf = self else { return }
-
+            strongSelf.state.isLoading = false
             guard error == nil,
                 let hits = hits else {
-                // TODO: Handle Error
+                strongSelf.state.receivedError = error
                 return
             }
 
