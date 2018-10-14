@@ -1,0 +1,6 @@
+# USAGE
+# Open a terminal in the folder where Cartfile is present
+# then run the script
+# carthage update --platform iOS
+
+github "Alamofire/Alamofire" == 4.7.3
