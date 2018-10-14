@@ -26,6 +26,9 @@
 		10BA8D9E2173A57E0028E762 /* ProductListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9D2173A57E0028E762 /* ProductListRequest.swift */; };
 		10BA8DA02173BE830028E762 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D9F2173BE830028E762 /* Global.swift */; };
 		10EE96832173C44000C4F32C /* Hit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96822173C44000C4F32C /* Hit.swift */; };
+		10EE96872173C8C500C4F32C /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96862173C8C500C4F32C /* ProductCollectionViewCell.swift */; };
+		10EE96892173C92100C4F32C /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10EE96882173C92100C4F32C /* ProductCollectionViewCell.xib */; };
+		10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE968A2173CEC000C4F32C /* NibLoadable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,9 @@
 		10BA8D9D2173A57E0028E762 /* ProductListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRequest.swift; sourceTree = "<group>"; };
 		10BA8D9F2173BE830028E762 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		10EE96822173C44000C4F32C /* Hit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hit.swift; sourceTree = "<group>"; };
+		10EE96862173C8C500C4F32C /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		10EE96882173C92100C4F32C /* ProductCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCollectionViewCell.xib; sourceTree = "<group>"; };
+		10EE968A2173CEC000C4F32C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 				102026A62173623100E2CB17 /* Network */,
 				10BA8D992173A3880028E762 /* Protocols */,
 				102026A72173626400E2CB17 /* Resources */,
+				10EE96842173C88800C4F32C /* Reusable Views */,
 				102026A52173622D00E2CB17 /* Scenes */,
 				102026A82173628500E2CB17 /* Storyboards */,
 			);
@@ -211,6 +218,7 @@
 		10BA8D992173A3880028E762 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				10EE968A2173CEC000C4F32C /* NibLoadable.swift */,
 				10BA8D9A2173A3A00028E762 /* StoryboardLoadable.swift */,
 			);
 			path = Protocols;
@@ -222,6 +230,23 @@
 				10BA8D9D2173A57E0028E762 /* ProductListRequest.swift */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		10EE96842173C88800C4F32C /* Reusable Views */ = {
+			isa = PBXGroup;
+			children = (
+				10EE96852173C8AE00C4F32C /* Cells */,
+			);
+			path = "Reusable Views";
+			sourceTree = "<group>";
+		};
+		10EE96852173C8AE00C4F32C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				10EE96862173C8C500C4F32C /* ProductCollectionViewCell.swift */,
+				10EE96882173C92100C4F32C /* ProductCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +334,7 @@
 			files = (
 				1020268F2173619E00E2CB17 /* LaunchScreen.storyboard in Resources */,
 				1020268C2173619E00E2CB17 /* Assets.xcassets in Resources */,
+				10EE96892173C92100C4F32C /* ProductCollectionViewCell.xib in Resources */,
 				1020268A2173619D00E2CB17 /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +401,9 @@
 				10BA8D89217379D50028E762 /* APIRouter.swift in Sources */,
 				10BA8DA02173BE830028E762 /* Global.swift in Sources */,
 				10BA8D9E2173A57E0028E762 /* ProductListRequest.swift in Sources */,
+				10EE96872173C8C500C4F32C /* ProductCollectionViewCell.swift in Sources */,
 				10EE96832173C44000C4F32C /* Hit.swift in Sources */,
+				10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */,
 				10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */,
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,
 				10BA8D8721736ED90028E762 /* Network.swift in Sources */,
