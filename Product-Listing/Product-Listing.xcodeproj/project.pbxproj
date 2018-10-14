@@ -36,6 +36,8 @@
 		10EE96992173E27300C4F32C /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EE96982173E27300C4F32C /* Kingfisher.framework */; };
 		10EE969C2173E3B100C4F32C /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */; };
 		10EE96A02173E67200C4F32C /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */; };
+		10EE96A32173E72100C4F32C /* ProductListRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A22173E72100C4F32C /* ProductListRoutingProtocol.swift */; };
+		10EE96A52173E73000C4F32C /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A42173E73000C4F32C /* ProductListRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		10EE96982173E27300C4F32C /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = SOURCE_ROOT; };
 		10EE969B2173E3B100C4F32C /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		10EE96A22173E72100C4F32C /* ProductListRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRoutingProtocol.swift; sourceTree = "<group>"; };
+		10EE96A42173E73000C4F32C /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +276,7 @@
 		10EE968C2173D1C800C4F32C /* List */ = {
 			isa = PBXGroup;
 			children = (
+				10EE96A12173E70C00C4F32C /* Router */,
 				10EE968F2173D28700C4F32C /* Network */,
 				102026862173619D00E2CB17 /* ProductListViewController.swift */,
 				10EE96942173D38400C4F32C /* ProductListViewModel.swift */,
@@ -302,6 +307,15 @@
 				10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */,
 			);
 			path = "Product Detail";
+			sourceTree = "<group>";
+		};
+		10EE96A12173E70C00C4F32C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				10EE96A22173E72100C4F32C /* ProductListRoutingProtocol.swift */,
+				10EE96A42173E73000C4F32C /* ProductListRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +477,7 @@
 				10BA8D9E2173A57E0028E762 /* ProductListRequest.swift in Sources */,
 				10EE96872173C8C500C4F32C /* ProductCollectionViewCell.swift in Sources */,
 				10EE96832173C44000C4F32C /* Hit.swift in Sources */,
+				10EE96A32173E72100C4F32C /* ProductListRoutingProtocol.swift in Sources */,
 				10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */,
 				10EE969C2173E3B100C4F32C /* UIImageView+Extensions.swift in Sources */,
 				10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */,
@@ -474,6 +489,7 @@
 				10BA8D9121739BF30028E762 /* ServiceManager.swift in Sources */,
 				10EE96952173D38400C4F32C /* ProductListViewModel.swift in Sources */,
 				10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */,
+				10EE96A52173E73000C4F32C /* ProductListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

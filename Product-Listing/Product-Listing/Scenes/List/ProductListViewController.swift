@@ -18,6 +18,7 @@ class ProductListViewController: UIViewController {
     @IBOutlet private weak var collectionView: UICollectionView!
 
     var viewModel = ProductListViewModel(dataController: ProductListDataController())
+    var router: ProductListRoutingProtocol = ProductListRouter()
 
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -72,6 +73,21 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
                             left: Constant.collectionViewCellPadding,
                             bottom: Constant.collectionViewCellPadding,
                             right: Constant.collectionViewCellPadding)
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension ProductListViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+
+        if let product = viewModel.product(at: indexPath.row),
+            let sku = product.sku {
+
+            router.viewControllerDidRequestProductDetail(self,
+                                                         skuId: sku)
+        }
     }
 }
 
