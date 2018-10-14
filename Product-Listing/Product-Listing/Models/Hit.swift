@@ -22,6 +22,9 @@ struct Hit: Codable {
     /// Description
     var description: String?
 
+    /// Designer's name
+    var designerCategoryName: String?
+
     /// Thumbnail image Url
     var thumbnail: String?
 

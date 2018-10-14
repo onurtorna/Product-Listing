@@ -14,12 +14,15 @@ final class ProductCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var priceLabel: UILabel!
 
-    static let cellSize: CGFloat = 274
+    static let cellHeight: CGFloat = 274
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    func customize(with product: Hit) {
+        nameLabel.text = product.name
+        designerName.text = product.designerCategoryName
+        if let price = product.price {
+            priceLabel.text = "\(price)"
+        }
 
-        // TODO: Customize views
     }
 }
 

@@ -26,6 +26,7 @@ class ProductListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        collectionView.delegate = self
         collectionView.dataSource = self
 
         collectionView.register(ProductCollectionViewCell.defaultNib,
@@ -55,7 +56,7 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.size.width / 2 - (Constant.collectionViewCellPadding * 2),
-                      height: ProductCollectionViewCell.cellSize)
+                      height: ProductCollectionViewCell.cellHeight)
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -82,7 +83,7 @@ extension ProductListViewController: UICollectionViewDataSource {
             withReuseIdentifier: ProductCollectionViewCell.defaultNibName,
             for: indexPath) as? ProductCollectionViewCell,
             let product = viewModel.product(at: indexPath.row) {
-            // TODO: Use product
+            cell.customize(with: product)
             return cell
         }
 
