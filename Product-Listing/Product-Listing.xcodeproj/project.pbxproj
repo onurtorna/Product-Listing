@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				102026842173619D00E2CB17 /* AppDelegate.swift */,
-				102026862173619D00E2CB17 /* ViewController.swift */,
-				102026882173619D00E2CB17 /* Main.storyboard */,
-				1020268B2173619E00E2CB17 /* Assets.xcassets */,
-				1020268D2173619E00E2CB17 /* LaunchScreen.storyboard */,
-				102026902173619E00E2CB17 /* Info.plist */,
+				102026A42173622200E2CB17 /* Models */,
+				102026A62173623100E2CB17 /* Network */,
+				102026A72173626400E2CB17 /* Resources */,
+				102026A52173622D00E2CB17 /* Scenes */,
+				102026A82173628500E2CB17 /* Storyboards */,
 			);
 			path = "Product-Listing";
 			sourceTree = "<group>";
@@ -94,6 +94,46 @@
 				1020269B2173619E00E2CB17 /* Info.plist */,
 			);
 			path = "Product-ListingTests";
+			sourceTree = "<group>";
+		};
+		102026A42173622200E2CB17 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		102026A52173622D00E2CB17 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				102026862173619D00E2CB17 /* ViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		102026A62173623100E2CB17 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		102026A72173626400E2CB17 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1020268B2173619E00E2CB17 /* Assets.xcassets */,
+				102026902173619E00E2CB17 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		102026A82173628500E2CB17 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				102026882173619D00E2CB17 /* Main.storyboard */,
+				1020268D2173619E00E2CB17 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +402,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6VNA22F3R;
-				INFOPLIST_FILE = "Product-Listing/Info.plist";
+				INFOPLIST_FILE = "Product-Listing/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -381,7 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6VNA22F3R;
-				INFOPLIST_FILE = "Product-Listing/Info.plist";
+				INFOPLIST_FILE = "Product-Listing/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
