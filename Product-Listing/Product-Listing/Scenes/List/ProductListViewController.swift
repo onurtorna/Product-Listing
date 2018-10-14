@@ -16,6 +16,8 @@ class ProductListViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    var viewModel = ProductListViewModel(dataController: ProductListDataController())
+
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         collectionView.collectionViewLayout.invalidateLayout()
@@ -28,6 +30,21 @@ class ProductListViewController: UIViewController {
 
         collectionView.register(ProductCollectionViewCell.defaultNib,
                                 forCellWithReuseIdentifier: ProductCollectionViewCell.defaultNibName)
+
+        viewModel.stateChangeHandler = applyState(_:)
+        viewModel.fetchProducts()
+    }
+}
+
+// MARK: - Helpers
+private extension ProductListViewController {
+
+    func applyState(_ change: ProductListState.Change) {
+
+        switch change {
+        case .dataFetch:
+            collectionView.reloadData()
+        }
     }
 }
 
@@ -56,15 +73,16 @@ extension ProductListViewController: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return viewModel.productCount
     }
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: ProductCollectionViewCell.defaultNibName,
-            for: indexPath) as? ProductCollectionViewCell {
-            // TODO:
+            for: indexPath) as? ProductCollectionViewCell,
+            let product = viewModel.product(at: indexPath.row) {
+            // TODO: Use product
             return cell
         }
 

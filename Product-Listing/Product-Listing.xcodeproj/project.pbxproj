@@ -31,6 +31,7 @@
 		10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE968A2173CEC000C4F32C /* NibLoadable.swift */; };
 		10EE96912173D29A00C4F32C /* ProductListDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96902173D29A00C4F32C /* ProductListDataProtocol.swift */; };
 		10EE96932173D2B500C4F32C /* ProductListDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96922173D2B500C4F32C /* ProductListDataController.swift */; };
+		10EE96952173D38400C4F32C /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96942173D38400C4F32C /* ProductListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		10EE968A2173CEC000C4F32C /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		10EE96902173D29A00C4F32C /* ProductListDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataProtocol.swift; sourceTree = "<group>"; };
 		10EE96922173D2B500C4F32C /* ProductListDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListDataController.swift; sourceTree = "<group>"; };
+		10EE96942173D38400C4F32C /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +260,7 @@
 			children = (
 				10EE968F2173D28700C4F32C /* Network */,
 				102026862173619D00E2CB17 /* ProductListViewController.swift */,
+				10EE96942173D38400C4F32C /* ProductListViewModel.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				10EE96912173D29A00C4F32C /* ProductListDataProtocol.swift in Sources */,
 				10BA8D9521739CB70028E762 /* ErrorHandler.swift in Sources */,
 				10BA8D9121739BF30028E762 /* ServiceManager.swift in Sources */,
+				10EE96952173D38400C4F32C /* ProductListViewModel.swift in Sources */,
 				10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
