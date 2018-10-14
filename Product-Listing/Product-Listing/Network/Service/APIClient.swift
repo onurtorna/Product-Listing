@@ -21,4 +21,16 @@ final class APIClient {
                                           completion: completion)
         }
     }
+
+    static func productDetail(of slug: String,
+                              completion: @escaping (Hit?, Error?) -> Void) {
+
+        APIRouter.productDetail(slug: slug).request.responseJSON(completionHandler: { (dataResponse) in
+
+            ServiceManager.handleResponse(dataResponse,
+                                          of: Hit.self,
+                                          completion: completion)
+        })
+
+    }
 }

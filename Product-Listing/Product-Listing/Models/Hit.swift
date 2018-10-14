@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Hit: Codable {
+struct Hit: Response {
 
     /// Unique id of the product
     var productId: Int?

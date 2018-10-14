@@ -38,6 +38,9 @@
 		10EE96A02173E67200C4F32C /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */; };
 		10EE96A32173E72100C4F32C /* ProductListRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A22173E72100C4F32C /* ProductListRoutingProtocol.swift */; };
 		10EE96A52173E73000C4F32C /* ProductListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A42173E73000C4F32C /* ProductListRouter.swift */; };
+		10EE96A82173E9EB00C4F32C /* ProductDetailDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A72173E9EB00C4F32C /* ProductDetailDataProtocol.swift */; };
+		10EE96AA2173E9F900C4F32C /* ProductDetailDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96A92173E9F900C4F32C /* ProductDetailDataController.swift */; };
+		10EE96AC2173EAAE00C4F32C /* ProductDetailRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10EE96AB2173EAAE00C4F32C /* ProductDetailRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +89,9 @@
 		10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		10EE96A22173E72100C4F32C /* ProductListRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRoutingProtocol.swift; sourceTree = "<group>"; };
 		10EE96A42173E73000C4F32C /* ProductListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRouter.swift; sourceTree = "<group>"; };
+		10EE96A72173E9EB00C4F32C /* ProductDetailDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDataProtocol.swift; sourceTree = "<group>"; };
+		10EE96A92173E9F900C4F32C /* ProductDetailDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDataController.swift; sourceTree = "<group>"; };
+		10EE96AB2173EAAE00C4F32C /* ProductDetailRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				10BA8D9D2173A57E0028E762 /* ProductListRequest.swift */,
+				10EE96AB2173EAAE00C4F32C /* ProductDetailRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 		10EE969E2173E65C00C4F32C /* Product Detail */ = {
 			isa = PBXGroup;
 			children = (
+				10EE96A62173E9D700C4F32C /* Network */,
 				10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */,
 			);
 			path = "Product Detail";
@@ -316,6 +324,15 @@
 				10EE96A42173E73000C4F32C /* ProductListRouter.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		10EE96A62173E9D700C4F32C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				10EE96A72173E9EB00C4F32C /* ProductDetailDataProtocol.swift */,
+				10EE96A92173E9F900C4F32C /* ProductDetailDataController.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -469,6 +486,8 @@
 			files = (
 				10BA8D9321739C210028E762 /* Response.swift in Sources */,
 				102026872173619D00E2CB17 /* ProductListViewController.swift in Sources */,
+				10EE96AC2173EAAE00C4F32C /* ProductDetailRequest.swift in Sources */,
+				10EE96AA2173E9F900C4F32C /* ProductDetailDataController.swift in Sources */,
 				10EE96A02173E67200C4F32C /* ProductDetailViewController.swift in Sources */,
 				10BA8D9B2173A3A00028E762 /* StoryboardLoadable.swift in Sources */,
 				10BA8D9821739F860028E762 /* ProductListResponse.swift in Sources */,
@@ -477,6 +496,7 @@
 				10BA8D9E2173A57E0028E762 /* ProductListRequest.swift in Sources */,
 				10EE96872173C8C500C4F32C /* ProductCollectionViewCell.swift in Sources */,
 				10EE96832173C44000C4F32C /* Hit.swift in Sources */,
+				10EE96A82173E9EB00C4F32C /* ProductDetailDataProtocol.swift in Sources */,
 				10EE96A32173E72100C4F32C /* ProductListRoutingProtocol.swift in Sources */,
 				10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */,
 				10EE969C2173E3B100C4F32C /* UIImageView+Extensions.swift in Sources */,

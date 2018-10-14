@@ -12,6 +12,8 @@ enum APIRouter {
 
     case productList(pageNumber: Int)
 
+    case productDetail(slug: String)
+
     // MARK: - Request
     var request: Alamofire.DataRequest {
 
@@ -31,7 +33,8 @@ enum APIRouter {
     var method: HTTPMethod {
 
         switch self {
-        case .productList:
+        case .productList,
+             .productDetail:
             return .get
         }
     }
@@ -44,25 +47,31 @@ enum APIRouter {
     }
 
     // MARK: - HTTPMethod
-    var path: String {
+    private var path: String {
 
         switch self {
         case .productList:
             return "api/women/clothing"
+
+        case .productDetail:
+            return "product/findbyslug"
         }
     }
 
     /// Mark: Headers
-    var headers: [String: String] {
-        // TODO: To be implemented
+    private var headers: [String: String] {
+        // Headers can be added here
         return [:]
     }
 
-    var parameters: Parameters? {
+    private var parameters: Parameters? {
 
         switch self {
         case .productList(pageNumber: let pageNumber):
             return CreateAnalysisRequest.generateParameters(pageNumber: pageNumber)
+
+        case .productDetail(slug: let slug):
+            return ProductDetailRequest.generateParameters(slug: slug)
         }
     }
 
