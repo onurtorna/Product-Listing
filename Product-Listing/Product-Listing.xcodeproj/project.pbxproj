@@ -13,6 +13,9 @@
 		1020268C2173619E00E2CB17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1020268B2173619E00E2CB17 /* Assets.xcassets */; };
 		1020268F2173619E00E2CB17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1020268D2173619E00E2CB17 /* LaunchScreen.storyboard */; };
 		1020269A2173619E00E2CB17 /* ProductListingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102026992173619E00E2CB17 /* ProductListingTests.swift */; };
+		103A7B3221753822007F92C5 /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3121753822007F92C5 /* ProductFilterViewController.swift */; };
+		103A7B342175385D007F92C5 /* ProductFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103A7B332175385D007F92C5 /* ProductFilterViewController.xib */; };
+		103A7B362175398F007F92C5 /* ProductFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B352175398F007F92C5 /* ProductFilterViewModel.swift */; };
 		10BA8D83217368D10028E762 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA8D82217368D10028E762 /* Alamofire.framework */; };
 		10BA8D8721736ED90028E762 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D8621736ED90028E762 /* Network.swift */; };
 		10BA8D89217379D50028E762 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D88217379D50028E762 /* APIRouter.swift */; };
@@ -65,6 +68,9 @@
 		102026952173619E00E2CB17 /* Product-ListingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Product-ListingTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		102026992173619E00E2CB17 /* ProductListingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListingTests.swift; sourceTree = "<group>"; };
 		1020269B2173619E00E2CB17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		103A7B3121753822007F92C5 /* ProductFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
+		103A7B332175385D007F92C5 /* ProductFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductFilterViewController.xib; sourceTree = "<group>"; };
+		103A7B352175398F007F92C5 /* ProductFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterViewModel.swift; sourceTree = "<group>"; };
 		10BA8D82217368D10028E762 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		10BA8D8621736ED90028E762 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		10BA8D88217379D50028E762 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -209,6 +215,24 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		103A7B2F217537F7007F92C5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				103A7B302175380C007F92C5 /* Product Filter */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		103A7B302175380C007F92C5 /* Product Filter */ = {
+			isa = PBXGroup;
+			children = (
+				103A7B3121753822007F92C5 /* ProductFilterViewController.swift */,
+				103A7B332175385D007F92C5 /* ProductFilterViewController.xib */,
+				103A7B352175398F007F92C5 /* ProductFilterViewModel.swift */,
+			);
+			path = "Product Filter";
+			sourceTree = "<group>";
+		};
 		10BA8D81217368B30028E762 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +292,7 @@
 		10EE96842173C88800C4F32C /* Reusable Views */ = {
 			isa = PBXGroup;
 			children = (
+				103A7B2F217537F7007F92C5 /* View Controllers */,
 				10EE96852173C8AE00C4F32C /* Cells */,
 			);
 			path = "Reusable Views";
@@ -424,6 +449,7 @@
 				1020268F2173619E00E2CB17 /* LaunchScreen.storyboard in Resources */,
 				1020268C2173619E00E2CB17 /* Assets.xcassets in Resources */,
 				10EE96892173C92100C4F32C /* ProductCollectionViewCell.xib in Resources */,
+				103A7B342175385D007F92C5 /* ProductFilterViewController.xib in Resources */,
 				1020268A2173619D00E2CB17 /* Product.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,12 +524,14 @@
 				10BA8DA02173BE830028E762 /* Global.swift in Sources */,
 				10BA8D9E2173A57E0028E762 /* ProductListRequest.swift in Sources */,
 				10EE96872173C8C500C4F32C /* ProductCollectionViewCell.swift in Sources */,
+				103A7B3221753822007F92C5 /* ProductFilterViewController.swift in Sources */,
 				10EE96832173C44000C4F32C /* Hit.swift in Sources */,
 				10EE96A82173E9EB00C4F32C /* ProductDetailDataProtocol.swift in Sources */,
 				10EE96A32173E72100C4F32C /* ProductListRoutingProtocol.swift in Sources */,
 				10EE968B2173CEC000C4F32C /* NibLoadable.swift in Sources */,
 				10EE969C2173E3B100C4F32C /* UIImageView+Extensions.swift in Sources */,
 				10BA8D8C21737A3F0028E762 /* NetworkManager.swift in Sources */,
+				103A7B362175398F007F92C5 /* ProductFilterViewModel.swift in Sources */,
 				10EE96932173D2B500C4F32C /* ProductListDataController.swift in Sources */,
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,
 				10BA8D8721736ED90028E762 /* Network.swift in Sources */,
