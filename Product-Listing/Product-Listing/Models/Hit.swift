@@ -30,4 +30,7 @@ struct Hit: Response {
 
     /// Price of the product
     var price: Int?
+
+    /// Configureable/Filterable attributes of the hit
+    var configurableAttributes: [ConfigurableAttribute]?
 }
