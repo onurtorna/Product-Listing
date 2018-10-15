@@ -29,8 +29,11 @@ class ProductListViewController: UIViewController {
     var viewModel = ProductListViewModel(dataController: ProductListDataController())
     var router: ProductListRoutingProtocol = ProductListRouter()
 
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
+    override func willTransition(to newCollection: UITraitCollection,
+                                 with coordinator: UIViewControllerTransitionCoordinator) {
+        super.willTransition(to: newCollection,
+                             with: coordinator)
+
         collectionView.collectionViewLayout.invalidateLayout()
     }
 
@@ -89,8 +92,8 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.size.width / 2 - (Constant.collectionViewCellPadding * 2),
-                      height: ProductCollectionViewCell.cellHeight)
+
+        return ProductCollectionViewCell.cellSize
     }
 
     func collectionView(_ collectionView: UICollectionView,
