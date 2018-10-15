@@ -16,6 +16,8 @@
 		103A7B3221753822007F92C5 /* ProductFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3121753822007F92C5 /* ProductFilterViewController.swift */; };
 		103A7B342175385D007F92C5 /* ProductFilterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103A7B332175385D007F92C5 /* ProductFilterViewController.xib */; };
 		103A7B362175398F007F92C5 /* ProductFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B352175398F007F92C5 /* ProductFilterViewModel.swift */; };
+		103A7B3921753C60007F92C5 /* ProductDetailRoutingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3821753C60007F92C5 /* ProductDetailRoutingProtocol.swift */; };
+		103A7B3B21753C91007F92C5 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3A21753C91007F92C5 /* ProductDetailRouter.swift */; };
 		10BA8D83217368D10028E762 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA8D82217368D10028E762 /* Alamofire.framework */; };
 		10BA8D8721736ED90028E762 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D8621736ED90028E762 /* Network.swift */; };
 		10BA8D89217379D50028E762 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D88217379D50028E762 /* APIRouter.swift */; };
@@ -71,6 +73,8 @@
 		103A7B3121753822007F92C5 /* ProductFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterViewController.swift; sourceTree = "<group>"; };
 		103A7B332175385D007F92C5 /* ProductFilterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductFilterViewController.xib; sourceTree = "<group>"; };
 		103A7B352175398F007F92C5 /* ProductFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFilterViewModel.swift; sourceTree = "<group>"; };
+		103A7B3821753C60007F92C5 /* ProductDetailRoutingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRoutingProtocol.swift; sourceTree = "<group>"; };
+		103A7B3A21753C91007F92C5 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		10BA8D82217368D10028E762 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		10BA8D8621736ED90028E762 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		10BA8D88217379D50028E762 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -233,6 +237,15 @@
 			path = "Product Filter";
 			sourceTree = "<group>";
 		};
+		103A7B3721753C06007F92C5 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				103A7B3821753C60007F92C5 /* ProductDetailRoutingProtocol.swift */,
+				103A7B3A21753C91007F92C5 /* ProductDetailRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		10BA8D81217368B30028E762 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +351,7 @@
 		10EE969E2173E65C00C4F32C /* Product Detail */ = {
 			isa = PBXGroup;
 			children = (
+				103A7B3721753C06007F92C5 /* Router */,
 				10EE96A62173E9D700C4F32C /* Network */,
 				10EE969F2173E67200C4F32C /* ProductDetailViewController.swift */,
 				10EE96AF2173ED6F00C4F32C /* ProductDetailViewModel.swift */,
@@ -514,6 +528,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10BA8D9321739C210028E762 /* Response.swift in Sources */,
+				103A7B3921753C60007F92C5 /* ProductDetailRoutingProtocol.swift in Sources */,
 				102026872173619D00E2CB17 /* ProductListViewController.swift in Sources */,
 				10EE96AC2173EAAE00C4F32C /* ProductDetailRequest.swift in Sources */,
 				10EE96AA2173E9F900C4F32C /* ProductDetailDataController.swift in Sources */,
@@ -542,6 +557,7 @@
 				10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */,
 				10EE96A52173E73000C4F32C /* ProductListRouter.swift in Sources */,
 				10EE96B02173ED6F00C4F32C /* ProductDetailViewModel.swift in Sources */,
+				103A7B3B21753C91007F92C5 /* ProductDetailRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

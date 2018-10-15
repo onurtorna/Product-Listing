@@ -11,6 +11,7 @@ import UIKit
 final class ProductDetailViewController: UIViewController {
 
     var viewModel: ProductDetailViewModel!
+    var router: ProductDetailRoutingProtocol!
 
     @IBOutlet private weak var productImageView: UIImageView!
     @IBOutlet private weak var designerName: UILabel!
@@ -22,12 +23,15 @@ final class ProductDetailViewController: UIViewController {
         super.viewDidLoad()
 
         applyLocalization()
+        initializeNavigationRightButton()
 
         viewModel.stateChangeHandler = applyState(_:)
         viewModel.fetchProductDetail()
+
     }
 }
 
+// MARK: - Helpers
 private extension ProductDetailViewController {
 
     func applyState(_ change: ProductDetailState.Change) {
@@ -43,7 +47,6 @@ private extension ProductDetailViewController {
 
         case .dataFetch(let product):
             customizeView(with: product)
-
         }
 
     }
@@ -52,6 +55,15 @@ private extension ProductDetailViewController {
         // TODO: Localise
         addToBagButton.setTitle("ADD TO BAG",
                                 for: .normal)
+    }
+
+    func initializeNavigationRightButton() {
+        // TODO: Localise
+        let rightBarButton = UIBarButtonItem(title: "Filter",
+                                             style: .done,
+                                             target: self,
+                                             action: #selector(rightNavigationBarButtonTapped))
+        navigationItem.rightBarButtonItem = rightBarButton
     }
 
     func customizeView(with product: Hit?) {
@@ -63,6 +75,14 @@ private extension ProductDetailViewController {
         if let price = product.price {
             priceLabel.text = "\(price)"
         }
+    }
+}
+
+// MARK: - Actions
+private extension ProductDetailViewController {
+
+    @objc func rightNavigationBarButtonTapped() {
+        router.viewControllerDidRequestProductDetail(self)
     }
 }
 
