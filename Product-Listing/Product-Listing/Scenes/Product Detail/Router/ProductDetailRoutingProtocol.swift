@@ -11,7 +11,6 @@ import UIKit
 protocol ProductDetailRoutingProtocol {
 
     /// Triggers when product detail view controller requests filtering
-    ///
-    /// - Parameter viewController: View Controller
-    func viewControllerDidRequestProductDetail(_ viewController: UIViewController)
+    func viewControllerDidRequestProductDetail(_ viewController: UIViewController,
+                                               attributes: [ConfigurableAttribute]?)
 }

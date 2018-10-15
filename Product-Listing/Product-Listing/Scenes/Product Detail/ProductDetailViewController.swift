@@ -82,7 +82,8 @@ private extension ProductDetailViewController {
 private extension ProductDetailViewController {
 
     @objc func rightNavigationBarButtonTapped() {
-        router.viewControllerDidRequestProductDetail(self)
+        router.viewControllerDidRequestProductDetail(self,
+                                                     attributes: viewModel.attributes)
     }
 }
 

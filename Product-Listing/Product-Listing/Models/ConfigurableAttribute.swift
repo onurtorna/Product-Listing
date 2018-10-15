@@ -16,7 +16,7 @@ struct ConfigurableAttribute: Codable {
     }
 
     /// Code of the configuration
-    var code: String?
+    var code: ConfigurationCode?
 
     /// Options of the configuration
     var options: [ConfigurableAttributeOption]?

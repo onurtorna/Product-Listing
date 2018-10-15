@@ -64,6 +64,12 @@ final class ProductDetailViewModel {
         }
     }
 
+    /// Attributes of the related slug
+    var attributes: [ConfigurableAttribute]? {
+        return state.product?.configurableAttributes
+    }
+
+
     init(slug: String,
          dataController: ProductDetailDataProtocol) {
         self.dataController = dataController
