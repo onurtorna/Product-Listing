@@ -21,6 +21,8 @@
 		103A7B3D21753E82007F92C5 /* ConfigurableAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3C21753E82007F92C5 /* ConfigurableAttribute.swift */; };
 		103A7B3F21753EBD007F92C5 /* ConfigurableAttributeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3E21753EBD007F92C5 /* ConfigurableAttributeOption.swift */; };
 		103A7B41217542BA007F92C5 /* PLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B40217542BA007F92C5 /* PLView.swift */; };
+		103A7B432175471B007F92C5 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B422175471B007F92C5 /* PickerView.swift */; };
+		103A7B4521754726007F92C5 /* PickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 103A7B4421754726007F92C5 /* PickerView.xib */; };
 		10BA8D83217368D10028E762 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA8D82217368D10028E762 /* Alamofire.framework */; };
 		10BA8D8721736ED90028E762 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D8621736ED90028E762 /* Network.swift */; };
 		10BA8D89217379D50028E762 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D88217379D50028E762 /* APIRouter.swift */; };
@@ -81,6 +83,8 @@
 		103A7B3C21753E82007F92C5 /* ConfigurableAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableAttribute.swift; sourceTree = "<group>"; };
 		103A7B3E21753EBD007F92C5 /* ConfigurableAttributeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableAttributeOption.swift; sourceTree = "<group>"; };
 		103A7B40217542BA007F92C5 /* PLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLView.swift; sourceTree = "<group>"; };
+		103A7B422175471B007F92C5 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		103A7B4421754726007F92C5 /* PickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PickerView.xib; sourceTree = "<group>"; };
 		10BA8D82217368D10028E762 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		10BA8D8621736ED90028E762 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		10BA8D88217379D50028E762 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -316,6 +320,8 @@
 				103A7B2F217537F7007F92C5 /* View Controllers */,
 				10EE96852173C8AE00C4F32C /* Cells */,
 				103A7B40217542BA007F92C5 /* PLView.swift */,
+				103A7B422175471B007F92C5 /* PickerView.swift */,
+				103A7B4421754726007F92C5 /* PickerView.xib */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 			files = (
 				1020268F2173619E00E2CB17 /* LaunchScreen.storyboard in Resources */,
 				1020268C2173619E00E2CB17 /* Assets.xcassets in Resources */,
+				103A7B4521754726007F92C5 /* PickerView.xib in Resources */,
 				10EE96892173C92100C4F32C /* ProductCollectionViewCell.xib in Resources */,
 				103A7B342175385D007F92C5 /* ProductFilterViewController.xib in Resources */,
 				1020268A2173619D00E2CB17 /* Product.storyboard in Resources */,
@@ -569,6 +576,7 @@
 				10BA8D8F21737CA30028E762 /* APIClient.swift in Sources */,
 				10EE96A52173E73000C4F32C /* ProductListRouter.swift in Sources */,
 				10EE96B02173ED6F00C4F32C /* ProductDetailViewModel.swift in Sources */,
+				103A7B432175471B007F92C5 /* PickerView.swift in Sources */,
 				103A7B3B21753C91007F92C5 /* ProductDetailRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
