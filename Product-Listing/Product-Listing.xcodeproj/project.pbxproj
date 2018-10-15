@@ -20,6 +20,7 @@
 		103A7B3B21753C91007F92C5 /* ProductDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3A21753C91007F92C5 /* ProductDetailRouter.swift */; };
 		103A7B3D21753E82007F92C5 /* ConfigurableAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3C21753E82007F92C5 /* ConfigurableAttribute.swift */; };
 		103A7B3F21753EBD007F92C5 /* ConfigurableAttributeOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B3E21753EBD007F92C5 /* ConfigurableAttributeOption.swift */; };
+		103A7B41217542BA007F92C5 /* PLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103A7B40217542BA007F92C5 /* PLView.swift */; };
 		10BA8D83217368D10028E762 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10BA8D82217368D10028E762 /* Alamofire.framework */; };
 		10BA8D8721736ED90028E762 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D8621736ED90028E762 /* Network.swift */; };
 		10BA8D89217379D50028E762 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10BA8D88217379D50028E762 /* APIRouter.swift */; };
@@ -79,6 +80,7 @@
 		103A7B3A21753C91007F92C5 /* ProductDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailRouter.swift; sourceTree = "<group>"; };
 		103A7B3C21753E82007F92C5 /* ConfigurableAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableAttribute.swift; sourceTree = "<group>"; };
 		103A7B3E21753EBD007F92C5 /* ConfigurableAttributeOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurableAttributeOption.swift; sourceTree = "<group>"; };
+		103A7B40217542BA007F92C5 /* PLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PLView.swift; sourceTree = "<group>"; };
 		10BA8D82217368D10028E762 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		10BA8D8621736ED90028E762 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		10BA8D88217379D50028E762 /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 			children = (
 				103A7B2F217537F7007F92C5 /* View Controllers */,
 				10EE96852173C8AE00C4F32C /* Cells */,
+				103A7B40217542BA007F92C5 /* PLView.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				103A7B362175398F007F92C5 /* ProductFilterViewModel.swift in Sources */,
 				10EE96932173D2B500C4F32C /* ProductListDataController.swift in Sources */,
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,
+				103A7B41217542BA007F92C5 /* PLView.swift in Sources */,
 				10BA8D8721736ED90028E762 /* Network.swift in Sources */,
 				10EE96912173D29A00C4F32C /* ProductListDataProtocol.swift in Sources */,
 				10BA8D9521739CB70028E762 /* ErrorHandler.swift in Sources */,
