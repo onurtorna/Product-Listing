@@ -87,6 +87,17 @@ private extension ProductDetailViewController {
     }
 }
 
+// MARK: - ProductFilteringProtocol
+extension ProductDetailViewController: ProductFilteringProtocol {
+
+    func viewControllerDidFinishedFiltering(_ viewController: UIViewController,
+                                            sizeSelection: ConfigurableAttributeOption?,
+                                            colorSelection: ConfigurableAttributeOption?) {
+        // TODO: Do filtering in view model with selections
+        navigationController?.popViewController(animated: true)
+    }
+}
+
 // MARK: - StoryboardLoadable
 extension ProductDetailViewController: StoryboardLoadable {
 

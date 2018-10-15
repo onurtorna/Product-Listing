@@ -8,6 +8,14 @@
 
 import UIKit
 
+protocol ProductFilteringProtocol: class {
+
+    // TODO: Embed selections into one model
+    func viewControllerDidFinishedFiltering(_ viewController: UIViewController,
+                                            sizeSelection: ConfigurableAttributeOption?,
+                                            colorSelection: ConfigurableAttributeOption?)
+}
+
 final class ProductFilterViewController: UIViewController {
 
     @IBOutlet private weak var colorPickerView: PickerView!
@@ -15,11 +23,14 @@ final class ProductFilterViewController: UIViewController {
 
     var viewModel: ProductFilterViewModel!
 
+    weak var delegate: ProductFilteringProtocol?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         viewModel.stateChangeHandler = applyState(_:)
     }
+
 }
 
 // MARK: - Helpers
@@ -45,6 +56,16 @@ private extension ProductFilterViewController {
                 colorPickerView.isHidden = true
             }
         }
+    }
+}
+
+// MARK: - Actions
+private extension ProductFilterViewController {
+
+    @IBAction func filterButtonTapped(_ sender: Any) {
+        delegate?.viewControllerDidFinishedFiltering(self,
+                                                     sizeSelection: viewModel.selectedSize,
+                                                     colorSelection: viewModel.selectedColor)
     }
 }
 

@@ -13,6 +13,9 @@ final class ProductDetailRouter: ProductDetailRoutingProtocol {
     func viewControllerDidRequestProductDetail(_ viewController: UIViewController,
                                                attributes: [ConfigurableAttribute]?) {
         let filterViewController = ProductFilterViewController.loadFromNib()
+        if let viewController = viewController as? ProductFilteringProtocol {
+            filterViewController.delegate = viewController
+        }
         filterViewController.viewModel = ProductFilterViewModel(attributes: attributes)
         viewController.navigationController?.pushViewController(filterViewController, animated: true)
     }

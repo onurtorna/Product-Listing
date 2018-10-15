@@ -46,6 +46,14 @@ final class ProductFilterViewModel {
         }
     }
 
+    var selectedSize: ConfigurableAttributeOption? {
+        return state.selectedSizeOption
+    }
+
+    var selectedColor: ConfigurableAttributeOption? {
+        return state.selectedColorOption
+    }
+
     init(attributes: [ConfigurableAttribute]?) {
         state = ProductFilterState(attributes: attributes)
     }
