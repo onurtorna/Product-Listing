@@ -17,6 +17,15 @@ class ProductListViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
 
+    lazy var refreshControl: UIRefreshControl = {
+
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self,
+                                 action: #selector(refreshCollectionView),
+                                 for: UIControl.Event.valueChanged)
+        return refreshControl
+    }()
+
     var viewModel = ProductListViewModel(dataController: ProductListDataController())
     var router: ProductListRoutingProtocol = ProductListRouter()
 
@@ -36,6 +45,8 @@ class ProductListViewController: UIViewController {
 
         viewModel.stateChangeHandler = applyState(_:)
         viewModel.fetchProducts()
+
+        collectionView.refreshControl = refreshControl
 
         collectionView.addPullToRefresh(to: .bottom) { [unowned self] () -> Void in
             self.viewModel.fetchProducts()
@@ -58,8 +69,17 @@ private extension ProductListViewController {
             // TODO: Show/hide error view
             break
         case .dataFetch:
+            refreshControl.endRefreshing()
             collectionView.reloadData()
         }
+    }
+}
+
+// MARK: - Actions
+private extension ProductListViewController {
+
+    @objc func refreshCollectionView() {
+        viewModel.resetStateAndFetchProducts()
     }
 }
 

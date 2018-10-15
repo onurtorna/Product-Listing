@@ -76,13 +76,20 @@ final class ProductListViewModel {
     init(dataController: ProductListDataProtocol) {
         self.dataController = dataController
     }
+
+    /// Resets state variables to initial value
+    func resetStateAndFetchProducts() {
+
+        state.pageNumber = 0
+        fetchProducts(shouldResetState: true)
+    }
 }
 
 // MARK: - Network
 extension ProductListViewModel {
 
     /// Fetches products with current page number
-    func fetchProducts() {
+    func fetchProducts(shouldResetState: Bool = false) {
 
         state.isLoading = true
         dataController.fetcthProductList(pageNumber: state.pageNumber) { [weak self] (hits, error) in
@@ -96,7 +103,13 @@ extension ProductListViewModel {
             }
 
             strongSelf.state.pageNumber += 1
-            strongSelf.state.hits.append(contentsOf: hits)
+
+            if shouldResetState {
+                strongSelf.state.hits = hits
+            } else {
+                strongSelf.state.hits.append(contentsOf: hits)
+            }
+
         }
     }
 }
