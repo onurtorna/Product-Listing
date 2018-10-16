@@ -74,6 +74,10 @@ final class ProductDetailViewModel {
         self.dataController = dataController
         state = ProductDetailState(slug: slug)
     }
+
+    func applyFiltering(selectedOptions: [ConfigurationCode : ConfigurableAttributeOption]) {
+        // TODO: Apply Filtering and send change to view controller
+    }
 }
 
 // MARK: - Network

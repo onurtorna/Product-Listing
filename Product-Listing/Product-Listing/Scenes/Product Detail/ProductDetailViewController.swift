@@ -91,9 +91,9 @@ private extension ProductDetailViewController {
 extension ProductDetailViewController: ProductFilteringProtocol {
 
     func viewControllerDidFinishedFiltering(_ viewController: UIViewController,
-                                            selectedOptions: [ConfigurableAttributeOption]?) {
-        // TODO: Do filtering in view model with selections
+                                            selectedOptions: [ConfigurationCode : ConfigurableAttributeOption]) {
         navigationController?.popViewController(animated: true)
+        viewModel.applyFiltering(selectedOptions: selectedOptions)
     }
 }
 

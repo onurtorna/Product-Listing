@@ -11,7 +11,7 @@ import UIKit
 protocol ProductFilteringProtocol: class {
 
     func viewControllerDidFinishedFiltering(_ viewController: UIViewController,
-                                            selectedOptions: [ConfigurableAttributeOption]?)
+                                            selectedOptions: [ConfigurationCode: ConfigurableAttributeOption])
 }
 
 final class ProductFilterViewController: UIViewController {
@@ -39,6 +39,10 @@ private extension ProductFilterViewController {
         case .initialPublish(attributes: let attributes):
             prepareFilterOptions(with: attributes)
 
+        case .applyFiltering(let selectedOptions):
+            delegate?.viewControllerDidFinishedFiltering(self,
+                                                         selectedOptions: selectedOptions)
+
         }
     }
 
@@ -50,6 +54,7 @@ private extension ProductFilterViewController {
 
             let pickerView = PickerView.loadFromNib()
             pickerView.configuration = attribute
+            pickerView.delegate = self
             optionHolderStackView.addArrangedSubview(pickerView)
         }
     }
@@ -59,7 +64,7 @@ private extension ProductFilterViewController {
 private extension ProductFilterViewController {
 
     @IBAction func filterButtonTapped(_ sender: Any) {
-        // TODO: To be implemented
+        viewModel.applyFiltering()
     }
 }
 

@@ -12,6 +12,7 @@ final class ProductFilterState {
 
     enum Change {
         case initialPublish(attributes: [ConfigurableAttribute]?)
+        case applyFiltering([ConfigurationCode: ConfigurableAttributeOption])
     }
 
     /// On change block
@@ -51,5 +52,9 @@ final class ProductFilterViewModel {
     func updateSelectedOption(`for` code: ConfigurationCode,
                               option: ConfigurableAttributeOption) {
         state.selectedOptions[code] = option
+    }
+
+    func applyFiltering() {
+        stateChangeHandler?(.applyFiltering(state.selectedOptions))
     }
 }
