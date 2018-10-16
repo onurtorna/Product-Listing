@@ -56,7 +56,8 @@ private extension ProductFilterViewController {
 extension ProductFilterViewController: PickerViewDelegate {
 
     func pickerViewDidSelectItem(_ view: PickerView,
-                                 selectedItem: ConfigurableAttributeOption) {
+                                 configurationCode: ConfigurationCode,
+                                 selectedOption: ConfigurableAttributeOption) {
         // TODO: To be implemented
     }
 }

@@ -1,5 +1,5 @@
 //
-//  PickerView.swift
+//  OptionPickerView.swift
 //  Product-Listing
 //
 //  Created by Onur Torna on 16.10.2018.
@@ -11,9 +11,11 @@ import UIKit
 protocol PickerViewDelegate: class {
 
     func pickerViewDidSelectItem(_ view: PickerView,
-                                 selectedItem: ConfigurableAttributeOption)
+                                 configurationCode: ConfigurationCode,
+                                 selectedOption: ConfigurableAttributeOption)
 }
 
+// TODO: Rename to option picker view
 final class PickerView: PLView {
 
     @IBOutlet private weak var textField: UITextField!
@@ -70,10 +72,12 @@ private extension PickerView {
     @objc func selectItem() {
 
         let row = pickerView.selectedRow(inComponent: 0)
-        if let option = configuration.options?[row] {
+        if let option = configuration.options?[row],
+            let code = configuration.code {
             textField.text = option.label
             delegate?.pickerViewDidSelectItem(self,
-                                              selectedItem: option)
+                                              configurationCode: code,
+                                              selectedOption: option)
         }
         endEditing(true)
     }
