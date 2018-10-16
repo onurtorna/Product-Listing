@@ -18,7 +18,7 @@ protocol PickerViewDelegate: class {
 // TODO: Rename to option picker view
 final class PickerView: PLView {
 
-    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var textField: CursorlessTextField!
 
     private let pickerView = UIPickerView()
 

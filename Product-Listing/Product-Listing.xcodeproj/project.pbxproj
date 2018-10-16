@@ -11,6 +11,7 @@
 		10187C5D2176772E002DE35F /* ProductDetailDummyDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10187C5C2176772E002DE35F /* ProductDetailDummyDataController.swift */; };
 		10187C5F217677C1002DE35F /* ProductDetailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10187C5E217677C1002DE35F /* ProductDetailTests.swift */; };
 		10187C6121767D9B002DE35F /* ConfigurationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10187C6021767D9B002DE35F /* ConfigurationCode.swift */; };
+		10187C6521768408002DE35F /* CursorlessTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10187C6421768408002DE35F /* CursorlessTextField.swift */; };
 		102026852173619D00E2CB17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102026842173619D00E2CB17 /* AppDelegate.swift */; };
 		102026872173619D00E2CB17 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102026862173619D00E2CB17 /* ProductListViewController.swift */; };
 		1020268A2173619D00E2CB17 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102026882173619D00E2CB17 /* Product.storyboard */; };
@@ -73,6 +74,7 @@
 		10187C5C2176772E002DE35F /* ProductDetailDummyDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDummyDataController.swift; sourceTree = "<group>"; };
 		10187C5E217677C1002DE35F /* ProductDetailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTests.swift; sourceTree = "<group>"; };
 		10187C6021767D9B002DE35F /* ConfigurationCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationCode.swift; sourceTree = "<group>"; };
+		10187C6421768408002DE35F /* CursorlessTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorlessTextField.swift; sourceTree = "<group>"; };
 		102026812173619D00E2CB17 /* Product-Listing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Product-Listing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		102026842173619D00E2CB17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		102026862173619D00E2CB17 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
@@ -347,6 +349,7 @@
 			children = (
 				103A7B2F217537F7007F92C5 /* View Controllers */,
 				10EE96852173C8AE00C4F32C /* Cells */,
+				10187C6421768408002DE35F /* CursorlessTextField.swift */,
 				103A7B40217542BA007F92C5 /* PLView.swift */,
 				103A7B422175471B007F92C5 /* PickerView.swift */,
 				103A7B4421754726007F92C5 /* PickerView.xib */,
@@ -598,6 +601,7 @@
 				102026852173619D00E2CB17 /* AppDelegate.swift in Sources */,
 				103A7B41217542BA007F92C5 /* PLView.swift in Sources */,
 				10BA8D8721736ED90028E762 /* Network.swift in Sources */,
+				10187C6521768408002DE35F /* CursorlessTextField.swift in Sources */,
 				10EE96912173D29A00C4F32C /* ProductListDataProtocol.swift in Sources */,
 				10BA8D9521739CB70028E762 /* ErrorHandler.swift in Sources */,
 				10BA8D9121739BF30028E762 /* ServiceManager.swift in Sources */,
