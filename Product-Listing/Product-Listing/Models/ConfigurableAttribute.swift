@@ -10,11 +10,6 @@ import Foundation
 
 struct ConfigurableAttribute: Codable {
 
-    enum ConfigurationCode: String, Codable {
-        case color
-        case sizeCode
-    }
-
     /// Code of the configuration
     var code: ConfigurationCode?
 
