@@ -14,6 +14,7 @@ final class ProductDetailState {
         case loading(Bool)
         case error(Error?)
         case dataFetch(Hit?)
+        case filterActivation(isActive: Bool)
     }
 
     /// On change block
@@ -39,6 +40,9 @@ final class ProductDetailState {
     var product: Hit? {
         didSet {
             onChange?(.dataFetch(product))
+
+            let isFilteringActive = product?.configurableAttributes?.count != 0
+            onChange?(.filterActivation(isActive: isFilteringActive))
         }
     }
 

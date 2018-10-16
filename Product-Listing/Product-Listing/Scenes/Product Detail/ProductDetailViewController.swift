@@ -23,7 +23,6 @@ final class ProductDetailViewController: UIViewController {
         super.viewDidLoad()
 
         applyLocalization()
-        initializeNavigationRightButton()
 
         viewModel.stateChangeHandler = applyState(_:)
         viewModel.fetchProductDetail()
@@ -47,6 +46,12 @@ private extension ProductDetailViewController {
 
         case .dataFetch(let product):
             customizeView(with: product)
+
+        case .filterActivation(isActive: let isActive):
+            if isActive {
+                initializeNavigationRightButton()
+            }
+
         }
 
     }
