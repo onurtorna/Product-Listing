@@ -79,7 +79,7 @@ final class ProductDetailViewModel {
         state = ProductDetailState(slug: slug)
     }
 
-    func applyFiltering(selectedOptions: [ConfigurationCode : ConfigurableAttributeOption]) {
+    func applyFiltering(selectedOptions: [String : ConfigurableAttributeOption]) {
         // TODO: Apply Filtering and send change to view controller
     }
 }

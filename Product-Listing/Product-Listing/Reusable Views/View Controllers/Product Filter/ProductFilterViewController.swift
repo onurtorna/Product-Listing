@@ -11,7 +11,7 @@ import UIKit
 protocol ProductFilteringProtocol: class {
 
     func viewControllerDidFinishedFiltering(_ viewController: UIViewController,
-                                            selectedOptions: [ConfigurationCode: ConfigurableAttributeOption])
+                                            selectedOptions: [String: ConfigurableAttributeOption])
 }
 
 final class ProductFilterViewController: UIViewController {
@@ -72,7 +72,7 @@ private extension ProductFilterViewController {
 extension ProductFilterViewController: PickerViewDelegate {
 
     func pickerViewDidSelectItem(_ view: PickerView,
-                                 configurationCode: ConfigurationCode,
+                                 configurationCode: String,
                                  selectedOption: ConfigurableAttributeOption) {
 
         viewModel.updateSelectedOption(for: configurationCode,

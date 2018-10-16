@@ -11,7 +11,7 @@ import Foundation
 struct ConfigurableAttribute: Codable {
 
     /// Code of the configuration
-    var code: ConfigurationCode?
+    var code: String?
 
     /// Options of the configuration
     var options: [ConfigurableAttributeOption]?

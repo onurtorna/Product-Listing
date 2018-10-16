@@ -11,7 +11,7 @@ import UIKit
 protocol PickerViewDelegate: class {
 
     func pickerViewDidSelectItem(_ view: PickerView,
-                                 configurationCode: ConfigurationCode,
+                                 configurationCode: String,
                                  selectedOption: ConfigurableAttributeOption)
 }
 
@@ -24,7 +24,7 @@ final class PickerView: PLView {
 
     var configuration: ConfigurableAttribute! {
         didSet {
-            textField.placeholder = configuration.code?.rawValue
+            textField.placeholder = configuration.code
         }
     }
 
