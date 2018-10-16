@@ -69,7 +69,6 @@ final class ProductDetailViewModel {
         return state.product?.configurableAttributes
     }
 
-
     init(slug: String,
          dataController: ProductDetailDataProtocol) {
         self.dataController = dataController
