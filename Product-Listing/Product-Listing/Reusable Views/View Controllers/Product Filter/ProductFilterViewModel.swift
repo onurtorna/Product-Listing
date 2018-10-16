@@ -11,7 +11,7 @@ import Foundation
 final class ProductFilterState {
 
     enum Change {
-        case initialPublish(size: ConfigurableAttribute?, color: ConfigurableAttribute?)
+        case initialPublish(attributes: [ConfigurableAttribute]?)
     }
 
     /// On change block
@@ -20,8 +20,8 @@ final class ProductFilterState {
     /// Attributes of the product
     var attributes: [ConfigurableAttribute]?
 
-    var selectedColorOption: ConfigurableAttributeOption?
-    var selectedSizeOption: ConfigurableAttributeOption?
+    /// Selected options in filtering
+    var selectedOptions: [ConfigurationCode: ConfigurableAttributeOption] = [:]
 
     init(attributes: [ConfigurableAttribute]?) {
         self.attributes = attributes
@@ -40,29 +40,11 @@ final class ProductFilterViewModel {
 
         set {
             state.onChange = newValue
-            let colorAttribute = state.attributes?.filter { return ($0.code)! == .color }.first
-            let sizeAttribute = state.attributes?.filter { return ($0.code)! == .sizeCode }.first
-            state.onChange?(.initialPublish(size: sizeAttribute, color: colorAttribute))
+            state.onChange?(.initialPublish(attributes: state.attributes))
         }
-    }
-
-    var selectedSize: ConfigurableAttributeOption? {
-        return state.selectedSizeOption
-    }
-
-    var selectedColor: ConfigurableAttributeOption? {
-        return state.selectedColorOption
     }
 
     init(attributes: [ConfigurableAttribute]?) {
         state = ProductFilterState(attributes: attributes)
-    }
-
-    func updateSelectedSize(option: ConfigurableAttributeOption?) {
-        state.selectedSizeOption = option
-    }
-
-    func updateSelectedColor(option: ConfigurableAttributeOption?) {
-        state.selectedColorOption = option
     }
 }

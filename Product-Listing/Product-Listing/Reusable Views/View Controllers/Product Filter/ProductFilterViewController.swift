@@ -10,17 +10,14 @@ import UIKit
 
 protocol ProductFilteringProtocol: class {
 
-    // TODO: Embed selections into one model
     func viewControllerDidFinishedFiltering(_ viewController: UIViewController,
-                                            sizeSelection: ConfigurableAttributeOption?,
-                                            colorSelection: ConfigurableAttributeOption?)
+                                            selectedOptions: [ConfigurableAttributeOption]?)
 }
 
 final class ProductFilterViewController: UIViewController {
 
-    @IBOutlet private weak var colorPickerView: PickerView!
-    @IBOutlet private weak var sizePickerView: PickerView!
-
+    @IBOutlet private weak var optionHolderStackView: UIStackView!
+    
     var viewModel: ProductFilterViewModel!
 
     weak var delegate: ProductFilteringProtocol?
@@ -39,22 +36,10 @@ private extension ProductFilterViewController {
     func applyState(_ change: ProductFilterState.Change) {
 
         switch change {
-        case .initialPublish(size: let sizeAttribute,
-                             color: let colorAttribute):
+        case .initialPublish(attributes: let attributes):
 
-            if let sizeAttribute = sizeAttribute {
-                sizePickerView.configuration = sizeAttribute
-                sizePickerView.delegate = self
-            } else {
-                sizePickerView.isHidden = true
-            }
-
-            if let colorAttribute = colorAttribute {
-                colorPickerView.configuration = colorAttribute
-                colorPickerView.delegate = self
-            } else {
-                colorPickerView.isHidden = true
-            }
+            // TODO: To be implemented
+            break
         }
     }
 }
@@ -63,9 +48,7 @@ private extension ProductFilterViewController {
 private extension ProductFilterViewController {
 
     @IBAction func filterButtonTapped(_ sender: Any) {
-        delegate?.viewControllerDidFinishedFiltering(self,
-                                                     sizeSelection: viewModel.selectedSize,
-                                                     colorSelection: viewModel.selectedColor)
+        // TODO: To be implemented
     }
 }
 
@@ -74,12 +57,7 @@ extension ProductFilterViewController: PickerViewDelegate {
 
     func pickerViewDidSelectItem(_ view: PickerView,
                                  selectedItem: ConfigurableAttributeOption) {
-
-        if view == sizePickerView {
-            
-        } else if view == colorPickerView {
-
-        }
+        // TODO: To be implemented
     }
 }
 

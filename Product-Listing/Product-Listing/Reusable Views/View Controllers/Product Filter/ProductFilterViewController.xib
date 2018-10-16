@@ -12,8 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductFilterViewController" customModule="ProductListing" customModuleProvider="target">
             <connections>
-                <outlet property="colorPickerView" destination="TPi-LS-IQF" id="sCD-95-YSt"/>
-                <outlet property="sizePickerView" destination="5Te-z2-5kM" id="bjm-8D-FqQ"/>
+                <outlet property="optionHolderStackView" destination="Ns4-RL-wE3" id="RUN-gn-Bii"/>
                 <outlet property="view" destination="iN0-l3-epB" id="80f-UE-PaI"/>
             </connections>
         </placeholder>
@@ -36,24 +35,8 @@
                         <action selector="filterButtonTapped:" destination="-1" eventType="touchUpInside" id="126-jh-Om7"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-RL-wE3">
-                    <rect key="frame" x="20" y="293.5" width="335" height="100"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Te-z2-5kM" customClass="PickerView" customModule="ProductListing" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="cM0-pv-sso"/>
-                            </constraints>
-                        </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPi-LS-IQF" customClass="PickerView" customModule="ProductListing" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="50" width="335" height="50"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="ATS-zQ-NHG"/>
-                            </constraints>
-                        </view>
-                    </subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-RL-wE3">
+                    <rect key="frame" x="20" y="318.5" width="335" height="50"/>
                     <viewLayoutGuide key="safeArea" id="A3L-JD-7Bc"/>
                 </stackView>
             </subviews>
@@ -65,6 +48,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QL7-Vw-Qk3" secondAttribute="bottom" constant="15" id="j6w-Ig-ofN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QL7-Vw-Qk3" secondAttribute="trailing" constant="15" id="jIb-2l-lGu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ns4-RL-wE3" secondAttribute="trailing" constant="20" id="kXz-Ay-Fam"/>
+                <constraint firstItem="Ns4-RL-wE3" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="zXN-Wa-azt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="138.40000000000001" y="115.59220389805098"/>
