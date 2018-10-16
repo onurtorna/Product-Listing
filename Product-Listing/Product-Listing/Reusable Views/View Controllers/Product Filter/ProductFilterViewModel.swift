@@ -47,4 +47,9 @@ final class ProductFilterViewModel {
     init(attributes: [ConfigurableAttribute]?) {
         state = ProductFilterState(attributes: attributes)
     }
+
+    func updateSelectedOption(`for` code: ConfigurationCode,
+                              option: ConfigurableAttributeOption) {
+        state.selectedOptions[code] = option
+    }
 }

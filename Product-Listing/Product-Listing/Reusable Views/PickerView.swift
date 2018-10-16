@@ -24,7 +24,7 @@ final class PickerView: PLView {
 
     var configuration: ConfigurableAttribute! {
         didSet {
-            textField.placeholder = configuration.code == .color ? "COLOR" : "SIZE"
+            textField.placeholder = configuration.code?.rawValue
         }
     }
 

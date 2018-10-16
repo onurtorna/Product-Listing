@@ -35,7 +35,7 @@
                         <action selector="filterButtonTapped:" destination="-1" eventType="touchUpInside" id="126-jh-Om7"/>
                     </connections>
                 </button>
-                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-RL-wE3">
+                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="50" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ns4-RL-wE3">
                     <rect key="frame" x="20" y="318.5" width="335" height="50"/>
                     <viewLayoutGuide key="safeArea" id="A3L-JD-7Bc"/>
                 </stackView>

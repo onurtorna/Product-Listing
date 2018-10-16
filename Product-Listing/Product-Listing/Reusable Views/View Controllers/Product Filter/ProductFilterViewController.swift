@@ -37,9 +37,20 @@ private extension ProductFilterViewController {
 
         switch change {
         case .initialPublish(attributes: let attributes):
+            prepareFilterOptions(with: attributes)
 
-            // TODO: To be implemented
-            break
+        }
+    }
+
+    func prepareFilterOptions(with attributes: [ConfigurableAttribute]?) {
+
+        guard let attributes = attributes else { return }
+
+        for attribute in attributes {
+
+            let pickerView = PickerView.loadFromNib()
+            pickerView.configuration = attribute
+            optionHolderStackView.addArrangedSubview(pickerView)
         }
     }
 }
@@ -58,7 +69,9 @@ extension ProductFilterViewController: PickerViewDelegate {
     func pickerViewDidSelectItem(_ view: PickerView,
                                  configurationCode: ConfigurationCode,
                                  selectedOption: ConfigurableAttributeOption) {
-        // TODO: To be implemented
+
+        viewModel.updateSelectedOption(for: configurationCode,
+                                       option: selectedOption)
     }
 }
 
